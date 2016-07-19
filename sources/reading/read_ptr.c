@@ -47,9 +47,9 @@ void					read_ptr(t_pf *pf, t_nd *nd)
 	else
 	{
 		value = (unsigned long)va_arg(pf->ap, void *);
-		if ((int)value < 0)
-			str = ft_strdup("ffffffffffffffff");
-		else
+		//if ((int)value < 0)
+		//	str = ft_strdup("ffffffffffffffff");
+		//else
 			str = uitoa_base_long(value, 16);
 	}
 	nd->weight -= (nd->weight - 2 >= 0) ? 2 : 0;

@@ -23,7 +23,7 @@ static void					rapid_swap(char **res, char **tmp)
 
 char						*uitoa_base_long(unsigned long nbr, int base)
 {
-	int						value;
+	unsigned long			value;
 	int						rest;
 	char					*res;
 	char					*tmp;
@@ -31,7 +31,7 @@ char						*uitoa_base_long(unsigned long nbr, int base)
 	res = NULL;
 	tmp = ft_strnew(1);
 	value = 1;
-	while (value && value != -1)
+	while (value && (long)value != -1)
 	{
 		value = nbr / base;
 		rest = nbr % base;

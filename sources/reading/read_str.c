@@ -16,6 +16,8 @@ void					read_str(t_pf *pf, t_nd *nd)
 {
 	char				*str;
 
+	if (nd->opt & WIDE)
+		return ;
 	str = va_arg(pf->ap, char *);
 	if (!str)
 		str = ft_strdup("(null)");

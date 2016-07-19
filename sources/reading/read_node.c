@@ -32,4 +32,6 @@ void					read_node(t_pf *pf, t_nd nd)
 		read_uint(pf, &nd);
 	else if (nd.opt & T_FLAG)
 		read_flag(pf, &nd);
+	else
+		pf->format--;
 }

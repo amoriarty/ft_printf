@@ -24,7 +24,7 @@ void				get_precision(t_pf *pf, t_nd *nd)
 			return ;
 		}
 		nd->precision = ft_atoi(pf->format);
-		if (isdigit(*(pf->format)))
+		if (ft_isdigit(*(pf->format)))
 			pf->format += ft_digitlen(nd->precision);
 	}
 }

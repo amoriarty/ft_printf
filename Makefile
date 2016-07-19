@@ -6,7 +6,7 @@
 #    By: alegent <alegent@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/02/13 12:17:39 by alegent           #+#    #+#              #
-#    Updated: 2016/07/12 13:41:41 by alegent          ###   ########.fr        #
+#    Updated: 2016/07/19 12:39:01 by alegent          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,13 +59,14 @@ INC_PATH= .
 INC= -I $(INC_LIB) -I $(INC_PATH)
 
 LIB= libft/libft.a
+LIBOBJ= `find libft/obj -type f`
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C $(INC_LIB)
-	@ar rc $(NAME) $(OBJ) $(LIB)
-	@echo "Your librairy is ready to go !"
+	@ar rc $(NAME) $(OBJ) $(LIBOBJ)
+	@echo "Your library is ready to go !"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir -p $(OBJ_PATH)/{conversion,parsing,print,reading,tools}

@@ -14,6 +14,7 @@ NAME= libftprintf.a
 
 SRC_PATH= sources/
 SRC_NAME= ft_printf.c \
+		  ft_dprintf.c \
 		  conversion/itoa_base.c \
 		  conversion/itoa_base_long.c \
 		  conversion/itoa_base_long_long.c \
